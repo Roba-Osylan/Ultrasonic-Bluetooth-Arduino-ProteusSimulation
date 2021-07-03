@@ -48,3 +48,11 @@ The condition of the if statement is satisfied as long as the person is near the
 ![Screen Shot 1442-11-23 at 8 19 53 PM](https://user-images.githubusercontent.com/85955049/124363317-2c5acd80-dc43-11eb-9153-56477f75a512.png)
 
 # Simulation Results
+
+The picture below shows the result when the distance is larger than 53 cm and less than or equal to 2 cm. The LED is OFF and the servos are on 0 degree (-180).
+![No Object Detected](https://user-images.githubusercontent.com/85955049/124363474-0f72ca00-dc44-11eb-9729-d40b8bedee47.png)
+
+while, the picture below shows the result when the distance is between 3-53 cm. The LED is ON and the servos are rotated to the specified angles.
+![Object Detected](https://user-images.githubusercontent.com/85955049/124363520-5b257380-dc44-11eb-8b97-5558cc0da627.png)
+
+

@@ -19,7 +19,7 @@ The circuit is shown in the figure below. The components used are:
 -Bluetooth Module.
 -Vertual Terminal.
 -400 ohm potentiometer.
--LED (used to indicate whether the condition of the if statement in the program is satisfied or not since the vertual terminal will not work properly without a real bluetooth port). 
+-LED (used to indicate whether the condition of the if statement in the program is satisfied or not since the virtual terminal will not work properly without a real bluetooth port). 
 -340 ohm resistor.
 -3x 5V battery, one for the Arduino, one for the ultrasonic sensor and the potentiometer and the other for the servo motors (4 used in the simulation for organization purpose).
 
@@ -27,9 +27,9 @@ The circuit is shown in the figure below. The components used are:
 
 Connection:
 -The Servos are connected to digital pins 6, 5, 3, 9, 10, 11 of the Arduino.
--The trigger and echo pin of the Ultrasonic are connected to pins 12 and 8 repectively.
--The RX and TX of the Bluetooth module are conected to the TX and RX pins of the Arduino respectively. 
--The RX and TX of the vertual terminal are connected to the TX and RX of the bluetooth module respectively.
+-The trigger and echo pin of the Ultrasonic are connected to pins 12 and 8 respectively.
+-The RX and TX of the Bluetooth module are connected to the TX and RX pins of the Arduino respectively. 
+-The RX and TX of the virtual terminal are connected to the TX and RX of the bluetooth module respectively.
 -The LED is connected to pin 13 of the Arduino. 
 
 # Code
@@ -40,7 +40,7 @@ The picture below shows the **first part** of the program where the servo and so
 The picture below shows the **second part** of the program where the serial starts and the mode of the trigger, echo and the LED pins are defined as well as attaching the Servo objects with the defined servos pins.
 ![Screen Shot 1442-11-23 at 8 15 06 PM](https://user-images.githubusercontent.com/85955049/124363340-53b19a80-dc43-11eb-9c55-1939b028b3fc.png)
 
-The **third part** of the program is shown in the following two pictures. Firstly, the trigger pin is set to low for to microseconds then a wave is generated for 3 seconds. After that, the pulseIn function measures the duration of the generated wave. Finally, the distance is calculated to set the conditions for the "if" statement. Note: the duration is divided by 2 to only concider the time of "receving" the wave (not the time of transmitting). 
+The **third part** of the program is shown in the following two pictures. Firstly, the trigger pin is set to low for to microseconds then a wave is generated for 3 seconds. After that, the pulseIn function measures the duration of the generated wave. Finally, the distance is calculated to set the conditions for the "if" statement. Note: the duration is divided by 2 to only consider the time of "receiving" the wave (not the time of transmitting). 
 
 The condition of the if statement is satisfied as long as the person is near the robot by less than or equal 2 cm and far by more than 50 cm, where the robot will not turned on. Otherwise, as soon as the distance becomes between 3-53 cm, the robot is turned on which means the video screen and the servos (robot's arm) are turned on. 
 ![Screen Shot 1442-11-23 at 8 19 41 PM](https://user-images.githubusercontent.com/85955049/124363288-033a3d00-dc43-11eb-99fb-f9b200c538a1.png)
